@@ -1,0 +1,572 @@
+/* Variáveis de cores e fontes */
+:root {
+  --gradiante-rosa-azul: linear-gradient(to right, #ff00ff, #009dff);
+  --gradiante-azul-rosa: linear-gradient(to right, #009dff, #ff00ff);
+  --branco: #fff;
+  --preto: rgba(21, 21, 21);
+  --scrollBar: #d2d2d2;
+
+  --font-principal: 'Montserrat', sans-serif;
+  --font-secundaria: 'Merriweather Sans', sans-serif;
+}
+
+/* Reseta estilo padrão e aplica fonte principal */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: var(--font-principal);
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+body {
+  background-color: var(--branco);
+}
+
+/* Estilo do moddo dark */
+.darkmode {
+  --gradiante-rosa-azul: linear-gradient(to right, #3ec5ff, #6cff52);
+  --gradiante-azul-rosa: linear-gradient(to right, #6cff52, #3ec5ff);
+  --branco: rgba(21, 21, 21);
+  --preto: #fff;
+  --scrollBar: rgb(25,25,25);
+}
+
+/* Estilos do header */
+header {
+  background-color: var(--preto);
+  color: var(--branco);
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  padding: 0.5rem 1.5rem;
+  backdrop-filter: blur(8px);
+  border-radius: 3rem;
+  z-index: 1000;
+}
+
+/* Estilos do logo */
+.logo {
+  color: var(--branco);
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos do menu de navegação */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-button {
+  background-color: transparent;
+  color: var(--branco);
+  border: none;
+}
+
+/* Estilos dos links do menu */
+li a {
+  position: relative;
+  color: var(--branco);
+  font-weight: 300;
+  font-family: var(--font-secundaria);
+}
+
+li a::before {
+  position: absolute;
+  content: '';
+  width: 0;
+  left: 0;
+  height: 5px;
+  top: 20px;
+  border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+  background: var(--gradiante-azul-rosa);
+}
+
+li a:hover::before {
+  width: 100%;
+}
+
+/* Estilo do botão 'Visit' */
+.visit-btn {
+  background: var(--gradiante-azul-rosa);
+  color: var(--branco);
+  padding: 0.8rem 1.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: var(--font-secundaria);
+  text-wrap: nowrap;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.visit-btn:hover {
+  background: var(--gradiante-rosa-azul);
+  transform: scale(1.03);
+}
+
+/* Estilo do button dark mode e light mode */
+.theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--branco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.theme-switch i {
+  font-size: 20px;
+  fill: var(--branco);
+  color: var(--preto);
+  text-align: center;
+}
+
+.theme-switch i:last-child {
+  display: none;
+}
+
+.darkmode .theme-switch i:first-child {
+  display: none;
+}
+
+.darkmode .theme-switch i:last-child {
+  display: block;
+}
+
+/* Estilo do ícone de menu (oculto em telas maiores) */
+#menu-icon {
+  font-size: 2rem;
+  display: none;
+}
+
+/* Estilos das seções principais */
+section {
+  min-height: 100vh;
+  padding: 8rem 12%;
+  width: 100%;
+  position: relative;
+}
+
+/* Estilo da seção "About" */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.about img {
+  width: 30vw;
+  border-radius: 50%;
+}
+
+/* Estilos do box de informações */
+.info-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.info-box h3 {
+  color: var(--preto);
+  font-size: 1.8rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.info-box h1 {
+  color: var(--preto);
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.info-box span {
+  background: var(--gradiante-rosa-azul);
+  background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+}
+
+.info-box p {
+  color: var(--preto);
+  font-weight: 500;
+  padding: 0.8rem;
+}
+
+/* Estilo dos botões dentro da seção "About" */
+.btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn, .btn-navigation{
+  background-color: var(--preto);
+  color: var(--branco);
+  border-radius: 3rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: 500;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--branco);
+  color: var(--preto);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-navigation {
+  margin: 10px 5px;
+}
+
+.btn-navigation:hover {
+  background-color: var(--branco);
+  color: var(--preto);
+}
+
+.btn a {
+  color: var(--branco);
+}
+
+.btn a:hover {
+  color: var(--preto);
+}
+
+/* Estilo dos ícones sociais */
+.socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.socials i {
+  color: var(--preto);
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.socials i:hover {
+  transform: scale(1.1);
+}
+
+/* Título das seções */
+.section-title {
+  color: var(--preto);
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+/* Estilos das informações de habilidades */
+.skills-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.skills img {
+  width: 24vw;
+  border-radius: 3rem;
+}
+
+/* Estilo da grid de cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Estilos dos cards da grid */
+.grid-card {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: left;
+  padding: 3rem;
+  color: var(--preto);
+  border: 2px solid var(--preto);
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.grid-card:hover {
+  background-color: var(--preto);
+  color: var(--branco);
+  transform: scale(1.02);
+}
+
+.grid-card i {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.grid-card span {
+  background: var(--gradiante-azul-rosa);
+  background-clip: text;
+  color: transparent;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Estilo da scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollBar);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradiante-azul-rosa);
+}
+
+/* Estilo da grid de projetos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Estilos dos cards de projetos */
+.projects-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  gap: 1.5rem;
+  color: var(--preto);
+  border: 2px solid var(--preto);
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+ 
+.projects-card:hover {
+  background-color: var(--preto);
+  color: var(--branco);
+  transform: translateY(-10px) scale(1.02);
+}
+
+.projects-card img {
+  width: 20vw;
+  border-radius: 1rem;
+}
+
+.projects-card:hover .btn {
+  background-color: var(--preto);
+  color: var(--branco);
+  border: 2px solid var(--branco);
+}
+
+.projects-card .btn:hover {
+  background-color: var(--branco);
+  color: var(--preto);
+  border: 2px solid var(--branco);
+}
+
+.projects-card h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* Estilo do formulário de contato */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+/* Estilos do input do formulário */
+form .input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1em;
+}
+
+.input-box label {
+  color: var(--preto);
+  font-size: 1.5em;
+}
+
+form input {
+  background: var(--gradiante-rosa-azul);
+  color: var(--branco);
+  font-size: 1.2em;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  border: none;
+  outline: none;
+  width: 100%;
+  max-width: 350px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+form input::placeholder {
+  color: var(--branco);
+}
+
+form input:focus {
+  background: var(--gradiante-azul-rosa);
+  transform: scale(1.05);
+}
+
+/* Estilos do textarea do formulário */
+form textarea {
+  background: var(--gradiante-rosa-azul);
+  color: var(--preto);
+  font-size: 1.3em;
+  padding: 1em 2.5em;
+  border-radius: 0.5em;
+  border: none;
+  outline: none;
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+}
+
+form textarea::placeholder {
+  color: var(--preto);
+}
+
+/* Estilos do botão de envio */
+.btn-submit {
+  background: var(--gradiante-azul-rosa);
+  color: var(--branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  width: 100%;
+  height: 50px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--preto);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+  background: var(--gradiante-rosa-azul);
+  transform: scale(1.1);
+}
+
+/* Estilos do footer */
+footer {
+  background-color: var(--branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  bottom: 0;
+  width: 100%;
+  padding: 3em 10%;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos das colunas no footer */
+.col-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.col-box {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+
+.col-box i {
+  font-size: 1.8em;
+  color: var(--preto);
+}
+
+.col-box span {
+  font-size: 1.1rem;
+  color: var(--preto);
+}
+
+.col-right {
+  display: flex;
+  flex-direction: column;
+  color: var(--preto);
+  gap: 1em;
+  max-width: 450px;
+}
+
+.col-right span {
+  font-weight: 600;
+  font-size: 1.2em;
+  color: var(--preto);
+}
+
+.col-right .socials-icons {
+  display: flex;
+  align-items: baseline;
+  justify-content: left;
+  gap: 1em;
+}
+
+.col-right .socials-icons i {
+  font-size: 1.5em;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.col-right .socials-icons i:hover {
+  transform: scale(1.2);
+  color: var(--preto);
+}
+
+.col-right .socials-icons a {
+  color: inherit;
+  text-decoration: none;
+}

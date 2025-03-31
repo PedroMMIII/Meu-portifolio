@@ -1,0 +1,335 @@
+<!-- Declaração do tipo de documento e da linguagem utilizada -->
+<!DOCTYPE html>
+<html lang="pt-br">
+  <!-- Cabeçalho da página, onde são definidas as metainformações -->
+  <head>
+    <!-- Define a codificação de caracteres utilizada na página -->
+    <meta charset="UTF-8" />
+    <!-- Define a configuração de visualização para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título da página, exibido na barra de título do navegador -->
+    <title>Portifolio</title>
+    <!-- Links para folhas de estilo CSS -->
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/mediaQuery.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Icones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!-- Corpo da página, onde é definido o conteúdo -->
+  <body>
+    <!-- Cabeçalho da página, com logotipo, menu e botões -->
+    <header class="header">
+      <!-- Logotipo da página -->
+      <a href="#" class="logo"><span>Pedro Monteiro</span></a>
+
+      <!-- Menu de navegação -->
+      <ul class="nav-links" id="nav-links">
+        <li>
+          <a href="#about">Sobre</a>
+        </li>
+        <li>
+          <a href="#skills">Habilidades</a>
+        </li>
+        <li>
+          <a href="#projects">Projetos</a>
+        </li>
+        <li>
+          <a href="#contact">Contato</a>
+        </li>
+      </ul>
+
+      <!-- Botão para abrir o menu em dispositivos móveis -->
+      <button class="menu-button menu-mobile"><i class="fa-solid fa-bars" id="menu-icon"></i></button>
+
+      <button class="theme-switch theme-mobile">
+        <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun"></i>
+      </button>
+
+      <!-- Botão para visitar o GitHub -->
+      <a href="https://github.com/PedroMMIII" target="_blank"><button class="visit-btn">Visite Github</button></a>
+    </header>
+
+    <!-- Seção sobre o autor -->
+    <section id="about" class="about">
+      <div class="about-container">
+        <!-- Imagem do autor -->
+        <img src="img/foto-ghibli-portifolio.png" alt="foto" />
+
+        <!-- Informações sobre o autor -->
+        <div class="info-box">
+          <div class="text">
+            <h3>Ola, meu nome é</h3>
+            <h1>Pedro Monteiro</h1>
+            <span>Frontend Developer</span>
+            <p>
+              Apaixonado por criar experiências web incríveis. Estou sempre buscando novos desafios e
+              oportunidades para crescer como desenvolvedor e criar soluções web inovadoras!
+            </p>
+          </div>
+
+          <!-- Botões para download do currículo e contato -->
+          <div class="btn-group">
+            <div class="btn">Download Curriculo</div>
+            <div class="btn"><a href=" https://wa.me/999999999" target="_blank">Contato</a></div>
+          </div>
+
+          <!-- Links para redes sociais -->
+          <div class="socials">
+            <a href="https://github.com/PedroMMIII" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+
+            <!-- Quando conta estiver criada coloque o link do linkedin aqui -->
+            <!-- <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção sobre habilidades -->
+    <section id="skills" class="skills">
+      <h2 class="section-title">Habilidades</h2>
+
+      <!-- Informações sobre habilidades -->
+      <div class="skills-info">
+        <!-- Grade de habilidades -->
+        <div class="grid" id="grid">
+          <div class="grid-card">
+            <i class="fa-brands fa-html5"></i>
+            <span>HTML</span>
+            <p>
+              Tenho uma base sólida em HTML e domínio geral da linguagem, com um destaque especial para a
+              semântica. Entendo a importância de estruturar corretamente os elementos para garantir
+              acessibilidade, SEO e boas práticas de desenvolvimento. Sei como utilizar tags semânticas de
+              forma eficiente para tornar o código mais organizado e compreensível, melhorando a experiência
+              do usuário e a manutenção do projeto.
+            </p>
+          </div>
+
+          <div class="grid-card">
+            <i class="fa-brands fa-css3-alt"></i>
+            <span>CSS</span>
+            <p>
+              Tenho um bom domínio de CSS e sou capaz de estilizar páginas com eficiência. Minha maior
+              qualidade está no uso do display: flex, sabendo aplicá-lo para criar layouts flexíveis e
+              responsivos. Além disso, tenho habilidade em replicar layouts com grande precisão, garantindo
+              que o design final fique o mais fiel possível ao modelo original, seja ele um wireframe ou uma
+              referência visual.
+            </p>
+          </div>
+
+          <div class="grid-card">
+            <i class="fa-brands fa-js"></i>
+            <span>JavaScript</span>
+            <p>
+              Tenho um nível de conhecimento equivalente a um desenvolvedor júnior em JavaScript. Minha maior
+              qualidade está na manipulação do DOM, onde me destaco ao modificar classes de elementos,
+              manipular botões e criar elementos dinamicamente no documento. Além disso, sou capaz de
+              trabalhar com eventos e interatividade para tornar as páginas mais dinâmicas e funcionais.
+            </p>
+          </div>
+
+          <div class="grid-card">
+            <i class="fa-brands fa-react"></i>
+            <span>React</span>
+            <p>
+              Estou no início da minha jornada com React, mas já consigo compreender e utilizar os principais
+              hooks sem dificuldades. Tenho familiaridade com a estrutura de componentes, estado e efeitos, e
+              estou constantemente aprimorando minha capacidade de criar interfaces dinâmicas e reutilizáveis.
+            </p>
+          </div>
+        </div>
+
+        <!-- Imagem de fundo para a seção de habilidades -->
+        <img src="img/foto-ghibli-portifolio.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Seção de projetos -->
+    <section id="projects" class="projects">
+      <h2 class="section-title">Projetos</h2>
+
+      <!-- Div que irá exibir os projetos dinamicamente -->
+      <div id="projectsGrid" class="projects-grid"></div>
+
+      <!-- Botões de navegação para trocar os projetos -->
+      <div class="navigation">
+        <button class="btn-navigation" id="prevBtn" onclick="changeProjects(-1)">Anterior</button>
+        <button class="btn-navigation" id="nextBtn" onclick="changeProjects(1)">Próximo</button>
+      </div>
+    </section>
+
+    <!-- Aqui estão todos os projetos, mas eles estão escondidos -->
+    <div id="allProjects" style="display: none">
+      <div class="projects-card">
+        <img src="img/Projeto-barbearia.png" alt="Projeto 1" />
+        <h3>Los hermanos</h3>
+        <p>
+          Landing page moderna para barbearia, feita com HTML, SASS e JavaScript. Destaca os serviços com um
+          design responsivo, animações sutis e estrutura otimizada para conversão, incluindo seções sobre a
+          barbearia, serviços e contato.
+        </p>
+        <div class="btn-group">
+          <a href="https://pedrommiii.github.io/Barbearia/" target="_blank"
+            ><button class="btn">Live Demo</button></a
+          >
+          <a href="https://github.com/PedroMMIII/Barbearia" target="_blank"
+            ><button class="btn">Github Repositorio</button></a
+          >
+        </div>
+      </div>
+
+      <div class="projects-card">
+        <img src="img/Projeto-Fp.png" alt="Projeto 2" />
+        <h3>Projeto FpSellection</h3>
+        <p>
+          Demonstração de site automotivo desenvolvido com HTML, CSS e JavaScript. Apresenta três carros
+          esportivos, exibindo nome e informações de cada modelo em um layout moderno e responsivo.
+        </p>
+        <div class="btn-group">
+          <a href="https://pedrommiii.github.io/Projeto-FpSellection/" target="_blank"
+            ><button class="btn">Live Demo</button></a
+          >
+          <a href="https://github.com/PedroMMIII/Projeto-FpSellection" target="_blank"
+            ><button class="btn">Github Repositorio</button></a
+          >
+        </div>
+      </div>
+
+      <div class="projects-card">
+        <img src="img/Projeto-X-man.png" alt="Projeto 3" />
+        <h3>Projeto X-man</h3>
+        <p>
+          Landing page interativa sobre X-Men, desenvolvida com HTML, CSS e JavaScript. O projeto apresenta
+          cards dinâmicos que exibem informações e habilidades dos personagens ao interagir com as imagens,
+          proporcionando uma experiência visual envolvente.
+        </p>
+        <div class="btn-group">
+          <a href="https://pedrommiii.github.io/X-men-site/" target="_blank"
+            ><button class="btn">Live Demo</button></a
+          >
+          <a href="https://pedrommiii.github.io/X-men-site/" target="_blank"
+            ><button class="btn">Github Repositorio</button></a
+          >
+        </div>
+      </div>
+
+      <div class="projects-card">
+        <img src="img/Projeto04.webp" alt="Projeto 4" />
+        <h3>Projeto A</h3>
+        <p>Lorem ipsum dolor sit amet consectetur...</p>
+        <div class="btn-group">
+          <a href="#"><button class="btn">Live Demo</button></a>
+          <a href="#"><button class="btn">Github Repositorio</button></a>
+        </div>
+      </div>
+
+      <div class="projects-card">
+        <img src="img/Projeto05.webp" alt="Projeto 5" />
+        <h3>Projeto B</h3>
+        <p>Lorem ipsum dolor sit amet consectetur...</p>
+        <div class="btn-group">
+          <a href="#"><button class="btn">Live Demo</button></a>
+          <a href="#"><button class="btn">Github Repositorio</button></a>
+        </div>
+      </div>
+
+      <div class="projects-card">
+        <img src="img/Projeto06.webp" alt="Projeto 6" />
+        <h3>Projeto C</h3>
+        <p>Lorem ipsum dolor sit amet consectetur...</p>
+        <div class="btn-group">
+          <a href="#"><button class="btn">Live Demo</button></a>
+          <a href="#"><button class="btn">Github Repositorio</button></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção de contato -->
+    <section class="contact" id="contact">
+      <h2 class="section-title"><span>Contato</span></h2>
+
+      <!-- Formulário de contato -->
+      <form id="contact-form" action="#">
+        <!-- Campo para nome -->
+        <div class="input-box">
+          <label for="name">Nome</label>
+          <input type="text" id="name" placeholder="Digite seu nome" />
+        </div>
+        <!-- Campo para e-mail -->
+        <div class="input-box">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Digite seu email" />
+        </div>
+
+        <!-- Campo para mensagem -->
+        <div class="input-box">
+          <label for="message">Mensagem</label>
+          <textarea id="message"></textarea>
+        </div>
+
+        <!-- Botão para enviar o formulário -->
+        <button class="btn-submit" id="btn-submit">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Rodapé da página -->
+    <footer class="footer-query">
+      <!-- Coluna esquerda com informações de contato -->
+      <div class="col-left">
+        <div class="col-box">
+          <span><i class="fa-brands fa-whatsapp"></i></span>
+          <span>(35)999999999</span>
+        </div>
+
+        <div class="col-box">
+          <span><i class="fa-regular fa-envelope"></i></span>
+          <span>teste@teste.com</span>
+        </div>
+      </div>
+
+      <!-- Coluna direita com informações sobre o serviço -->
+      <div class="col-right">
+        <span>Sobre meu serviço</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veniam facilis voluptatum dolor!
+          Perspiciatis, consequatur praesentium, quasi in ea quidem modi vel quod voluptate quam recusandae
+          maxime ducimus. Inventore, natus?
+        </p>
+
+        <!-- Links para redes sociais -->
+        <div class="socials-icons">
+          <a href="#"
+            ><span><i class="fa-brands fa-github"></i></span
+          ></a>
+          <a href="#"
+            ><span><i class="fa-brands fa-instagram"></i></span
+          ></a>
+
+          <!-- Quando conta do linkedin estiver criada coloque o link dela aqui -->
+          <!-- <a href="#"
+            ><span><i class="fa-brands fa-linkedin"></i></span
+          ></a> -->
+        </div>
+      </div>
+    </footer>
+
+    <!-- Link para o arquivo JavaScript -->
+
+    <!-- Carregar a biblioteca do EmailJS primeiro -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Seu script de envio de e-mail -->
+    <script src="js/emailApi.js" defer></script>
+    <!-- Alert personalizado -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Outros scripts gerais -->
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

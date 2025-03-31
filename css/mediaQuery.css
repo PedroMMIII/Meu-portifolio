@@ -1,0 +1,242 @@
+/* Media query para dispositivos com largura máxima de 1280px */
+@media (max-width: 1280px) {
+  /* Ajusta o padding e o gap do header */
+  header {
+    padding: 1rem 2rem;
+    gap: 2rem;
+  }
+
+  /* Modifica o gap do container da seção sobre */
+  .about .about-container {
+    gap: 3rem;
+  }
+
+  /* Altera a direção do layout das skills para coluna */
+  .skills-info {
+    flex-direction: column;
+  }
+
+  /* Adiciona padding nas seções de projetos */
+  .projects {
+    padding: 0px 10px;
+  }
+
+  /* Ajusta o tamanho da fonte do label na seção de contato */
+  .contact .input-box label {
+    font-size: 1.5rem;
+  }
+
+  /* Ajuste no padding e font-size do input dentro de input-box */
+  .input-box input {
+    padding: 1.5rem 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  /* Ajusta o tamanho da fonte do placeholder do input */
+  .input-box input::placeholder {
+    font-size: 1.5rem;
+  }
+
+  /* Altera altura e largura máxima do textarea de mensagem */
+  form textarea#message {
+    height: 70px;
+    max-width: 300px;
+  }
+
+  /* Aumenta o tamanho do ícone no input-box */
+  .input-box i {
+    font-size: 2.5rem;
+  }
+
+  /* Ajuste no botão de envio, alterando altura, largura e padding */
+  #btn-submit {
+    height: 60px;
+    max-width: 280px;
+    padding: 1.5rem 3rem;
+    font-size: 1.7rem;
+  }
+}
+
+/* Media query para dispositivos com largura máxima de 768px */
+@media (max-width: 768px) {
+  /* Ajuste do padding e gap no header */
+  .header {
+    gap: 1rem;
+    padding: 1rem 1rem;
+  }
+
+  /* Reduz o tamanho da fonte do logo */
+  header .logo {
+    font-size: 1rem;
+  }
+
+  /* Esconde o botão de visita no header */
+  header .visit-btn {
+    display: none;
+  }
+
+  /* Ajuste na grid, alterando a quantidade de colunas */
+  #grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Ajuste no tamanho das skills-info */
+  .skills-info {
+    width: 70vw;
+  }
+
+  /* Altera o layout da grid de projetos para uma coluna */
+  .projects .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ajuste do width para 100% nos cards de projeto */
+  .projects .projects-card {
+    width: 100%;
+  }
+
+  /* Ajusta o tamanho do label na seção de contato */
+  .contact .input-box label {
+    font-size: 1.5rem;
+  }
+
+  /* Ajusta o padding e font-size do input na input-box */
+  .input-box input {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+  }
+
+  /* Ajuste no tamanho do placeholder no input */
+  form textarea#message {
+    height: 67px;
+    max-width: 320px;
+  }
+
+  /* Aumenta o tamanho do placeholder no input */
+  .input-box input::placeholder {
+    font-size: 1.5rem;
+  }
+
+  /* Esconde o ícone de input */
+  .input-box i {
+    display: none;
+  }
+
+  /* Ajusta o tamanho e padding do botão de submit */
+  #btn-submit {
+    height: 60px;
+    max-width: 250px;
+    padding: 1.3rem 2.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* Media query para dispositivos com largura máxima de 600px */
+@media (max-width: 600px) {
+  /* Exibe o menu icon */
+  header #menu-icon {
+    display: block;
+  }
+
+  /* Estilos do menu de navegação, tornando-o oculto e em formato de coluna */
+  #nav-links {
+    background: rgb(0, 0, 0, 0.9);
+    color: white;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 3rem;
+  }
+
+  /* Estilos para o botão do menu, removendo borda e ajustando a cor */
+  .menu-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* Estilos do menu de navegação, ajustando o espaçamento */
+  .nav-links li {
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+
+  /* Quando o menu estiver ativo, ele ficará visível */
+  .nav-links.active {
+    display: block;
+  }
+
+  .theme-mobile {
+    position: fixed;
+    top: 7px;
+    left: 10px;
+  }
+
+  /* Ajusta padding e gap do header */
+  .header {
+    padding: 1rem 5rem;
+    gap: 8rem;
+  }
+
+  /* Ajuste no tamanho do logo */
+  .header .logo {
+    font-size: 1.5rem;
+  }
+
+  /* Modifica o layout da seção sobre, com flex-direction em coluna */
+  #about .about-container {
+    flex-direction: column;
+    gap: 7rem;
+  }
+
+  /* Ajuste no tamanho da imagem na seção sobre */
+  .about-container img {
+    width: 80vw;
+  }
+
+  /* Ajuste do tamanho do label na seção de contato */
+  .contact .input-box label {
+    font-size: 1.5rem;
+  }
+
+  /* Ajuste no padding e tamanho do input-box */
+  .input-box input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 3rem;
+    width: 80%;
+    font-size: 1.5rem;
+  }
+
+  /* Modifica o tamanho do placeholder do input */
+  .input-box::placeholder {
+    font-size: 1rem;
+  }
+
+  /* Ajustes na altura e largura do textarea */
+  form textarea#message {
+    width: 85%;
+    height: 50px;
+    max-width: 450px;
+  }
+
+  /* Ajustes no botão de submit */
+  #btn-submit {
+    height: 50px;
+    max-width: 200px;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+  }
+
+  /* Ajuste no footer, aumentando sua largura */
+  .footer-query {
+    width: 105%;
+  }
+}
