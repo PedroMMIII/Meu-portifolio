@@ -107,6 +107,10 @@
     display: flex;
   }
 
+  #nav-links.active li a {
+    color: #fff;
+  }
+
   #theme-mobile {
     position: absolute;
     top: 50%;
@@ -185,10 +189,10 @@
   }
 
   .skills-info {
-    width: 95vw; 
-    max-width: 350px; 
-    padding: 1rem; 
-    line-height: 1.5; 
+    width: 95vw;
+    max-width: 350px;
+    padding: 1rem;
+    line-height: 1.5;
   }
 
   #theme-switch {
