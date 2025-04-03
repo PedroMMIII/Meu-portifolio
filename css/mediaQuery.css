@@ -185,9 +185,6 @@
   }
 
   .skills-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 95vw; 
     max-width: 350px; 
     padding: 1rem; 
