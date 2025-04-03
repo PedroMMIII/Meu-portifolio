@@ -144,17 +144,30 @@
     font-size: 3rem;
   }
 
-  #grid {
-    grid-template-columns: repeat(1, 1fr);
+  #skills-info {
+    width: 90vw;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto; /* Centraliza o container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens */
+    gap: 2rem;
   }
 
-  #skills-info-mobile {
-    width: 90vw;
+  #grid {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center; /* Centraliza os cards */
+    justify-content: center; /* Garante alinhamento vertical */
+    width: 100%;
+  }
+
+  #grid-card-mobile {
+    width: 90%;
     max-width: 400px;
-    line-height: 1.5;
+    padding: 1.5rem;
   }
 
   #skills img {
