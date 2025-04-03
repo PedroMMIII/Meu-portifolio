@@ -28,7 +28,7 @@
     <!-- Cabeçalho da página, com logotipo, menu e botões -->
     <header class="header">
       <!-- Logotipo da página -->
-      <a href="#" class="logo"><span>Pedro Monteiro</span></a>
+      <a href="#" class="logo" id="logo"><span>Pedro Monteiro</span></a>
 
       <!-- Menu de navegação -->
       <ul class="nav-links" id="nav-links">
@@ -47,15 +47,15 @@
       </ul>
 
       <!-- Botão para abrir o menu em dispositivos móveis -->
-      <button class="menu-button menu-mobile"><i class="fa-solid fa-bars" id="menu-icon"></i></button>
+      <button class="menu-button"><i class="fa-solid fa-bars" id="menu-icon"></i></button>
 
-      <button class="theme-switch theme-mobile">
+      <button class="theme-switch" id="theme-mobile">
         <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun"></i>
       </button>
 
       <!-- Botão para visitar o GitHub -->
       <a href="https://github.com/PedroMMIII" target="_blank"
-        ><button class="visit-btn">Visite Github</button></a
+        ><button class="visit-btn" id="visit-btn">Visite Github</button></a
       >
     </header>
 
@@ -106,7 +106,7 @@
       <h2 class="section-title" id="mobile-title-section">Habilidades</h2>
 
       <!-- Informações sobre habilidades -->
-      <div class="skills-info">
+      <div class="skills-info" id="skills-info-mobile">
         <!-- Grade de habilidades -->
         <div class="grid" id="grid">
           <div class="grid-card">
@@ -314,7 +314,7 @@
         </p>
 
         <!-- Links para redes sociais -->
-        <div class="socials-icons">
+        <div class="socials-icons" id="socials-icons-mobile">
           <a href="#"
             ><span><i class="fa-brands fa-github"></i></span
           ></a>
@@ -336,7 +336,11 @@
     <script src="js/emailApi.js" defer></script>
     <!-- Alert personalizado -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- Outros scripts gerais -->
-    <script src="js/script.js" defer></script>
+    <!-- Script de alterar thema -->
+    <script src="js/theme.js" defer></script>
+    <!-- Script carousel  de projetos -->
+    <script src="js/projects.js" defer></script>
+    <!-- Script do menu hamburger -->
+     <script src="js/menuHamburger.js"></script>
   </body>
 </html>

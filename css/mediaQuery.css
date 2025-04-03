@@ -1,42 +1,87 @@
 /* Estilos para telas médias (tablets) */
 @media screen and (max-width: 1024px) {
-  header {
+  .header {
     gap: 3rem;
     padding: 0.5rem 1rem;
   }
 
-  .about .about-container {
+  #about .about-container {
     flex-direction: column;
     gap: 3rem;
   }
 
-  .about img {
+  #about img {
     width: 50vw;
   }
 
-  .skills-info {
+  #skills-info-mobile {
     flex-direction: column;
     gap: 3rem;
   }
 
-  .skills img {
+  #skills img {
     width: 50vw;
   }
 
-  .grid {
+  #grid {
     grid-template-columns: 1fr;
   }
 
-  .projects-grid {
+  #projects-grid {
     grid-template-columns: 1fr;
   }
 }
+
+@media screen and (max-width: 929px) {
+  .header {
+    width: 100%;
+    padding: 0.5rem 1rem; /* Mantém um bom espaçamento lateral */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribui melhor os elementos */
+    gap: 1rem; /* Evita que os itens fiquem muito colados */
+  }
+
+  #logo {
+    font-size: 1.1rem; /* Mantém o nome visível sem ocupar muito espaço */
+
+  }
+
+  #nav-links {
+    font-size: 0.9rem;
+  }
+
+  #menu-button {
+    font-size: 1.4rem;
+    padding: 0.4rem;
+    margin-left: auto; /* Empurra o menu para o lado direito */
+  }
+
+  #theme-switch {
+    font-size: 1rem;
+    padding: 0.5rem; /* Mantém o botão mais equilibrado */
+    border-radius: 50%; /* Mantém ele redondo */
+    margin-left: 0.5rem; /* Adiciona um pequeno espaçamento ao lado do menu */
+  }
+
+  #visit-btn {
+    font-size: 0.85rem;
+    padding: 0.9rem 0.9rem;
+    margin-left: 0.5rem; /* Dá espaço entre os botões */
+  }
+}
+
 
 /* Estilos para telas pequenas (celulares) */
 @media screen and (max-width: 768px) {
   /* Fazer o header */
   header #menu-icon {
     display: block;
+    padding: 2px;
+  }
+
+  .visit-btn {
+    display: none;
   }
 
   #nav-links {
@@ -60,9 +105,17 @@
     cursor: pointer;
   }
 
-  .nav-links.active {
+  #nav-links.active {
     display: flex;
   }
+
+  #theme-mobile {
+    position: absolute;
+    top: 50%;   
+    right: 1%;         
+    transform: translateY(-50%); 
+  }
+  
 
   .about .about-container {
     text-align: center;
@@ -121,7 +174,18 @@
     gap: 2rem;
   }
 
-  .col-right .socials-icons {
+  .col-right #socials-icons-mobile {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo span {
+    font-size: 1.1rem; /* Diminui o tamanho do nome */
+  }
+
+  #theme-switch {
+    font-size: 0.8rem; /* Diminui o tamanho */
+    padding: 0.3rem; /* Reduz o espaçamento interno */
   }
 }

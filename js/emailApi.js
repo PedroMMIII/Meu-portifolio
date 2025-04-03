@@ -7,8 +7,7 @@ function alertErro(text) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Inicializa o EmailJS com o seu USER ID
-  emailjs.init('DnhMt1YzXLquNAihp'); // Substitua pelo seu User ID
+  emailjs.init('DnhMt1YzXLquNAihp');
 
   // Seleciona o formulário
   const form = document.getElementById('contact-form');
@@ -51,12 +50,17 @@ document.addEventListener('DOMContentLoaded', function () {
     emailjs
       .send('service_iyjtv47', 'template_bws3glb', params)
       .then(function () {
-        alert('Mensagem enviada com sucesso!'); // Feedback positivo
+        Swal.fire({
+          title: 'Email enviado!',
+          text: 'Seu email foi enviado com sucesso!',
+          icon: 'success',
+        }); // Feedback positivo
+
         form.reset(); // Limpa os campos do formulário
       })
       .catch(function (error) {
         console.error('Erro ao enviar o email:', error);
-        alert('Erro ao enviar a mensagem. Tente novamente mais tarde.');
+        alertErro('Erro ao enviar a mensagem. Tente novamente mais tarde.');
       });
   });
 });
