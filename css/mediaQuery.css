@@ -203,11 +203,22 @@
     font-size: 1.1rem; /* Diminui o tamanho do nome */
   }
 
-  .skills-info {
-    width: 95vw; 
-    max-width: 350px; 
-    padding: 1rem; 
-    line-height: 1.5; 
+  #skills-info {
+    width: 95vw;
+    margin: 0 auto;
+    gap: 2.5rem; /* Aumenta espaço entre as seções */
+  }
+
+  #grid {
+    align-items: center;
+    gap: 3rem; /* Mais espaço entre os cards */
+  }
+
+  #grid-card {
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    padding: 1.8rem; /* Mais espaço interno */
   }
 
   #theme-switch {
