@@ -150,6 +150,9 @@
 
   #skills-info-mobile {
     width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 400px;
     line-height: 1.5;
   }
