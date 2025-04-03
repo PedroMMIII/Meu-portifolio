@@ -148,11 +148,10 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .skills-info {
+  #skills-info-mobile {
     width: 90vw;
     max-width: 400px;
-    padding: 1rem;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   #skills img {
@@ -189,10 +188,10 @@
   }
 
   .skills-info {
-    width: 95vw;
-    max-width: 350px;
-    padding: 1rem;
-    line-height: 1.5;
+    width: 95vw; 
+    max-width: 350px; 
+    padding: 1rem; 
+    line-height: 1.5; 
   }
 
   #theme-switch {
