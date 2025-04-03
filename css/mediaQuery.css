@@ -151,6 +151,7 @@
   .skills-info {
     width: 90vw;
     max-width: 400px;
+    padding: 1rem;
     line-height: 1.6;
   }
 
