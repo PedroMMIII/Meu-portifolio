@@ -46,21 +46,20 @@ header {
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ajustado para melhor espaçamento em mobile */
-  gap: 1rem; /* Ajustado para mobile, será alterado em media query */
-  padding: 0.5rem 1rem; /* Ajustado para mobile */
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
   backdrop-filter: blur(8px);
   border-radius: 3rem;
   z-index: 1000;
-  width: 90%; /* Ajustado para mobile */
-  max-width: 1200px; /* Limite para desktop */
+  width: 90%;
+  max-width: 1200px;
 }
 
 /* Estilos do logotipo */
 .header .logo {
-  /* Usando a classe 'logo' */
   color: var(--branco);
-  font-size: 1.2rem; /* Ajustado para mobile */
+  font-size: 1.2rem;
   font-weight: 600;
   text-wrap: nowrap;
   transition: 0.3s ease-in-out;
@@ -70,36 +69,75 @@ header {
   transform: scale(1.1);
 }
 
-/* Estilos do menu de navegação (mobile por padrão escondido) */
+/* ESTILOS CORRIGIDOS E ADICIONADOS PARA O MENU DE NAVEGAÇÃO */
 .nav-links {
-  display: none; /* Escondido por padrão para mobile, será exibido em desktop */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  background-color: var(--preto);
+  padding: 1rem 0;
+  border-radius: 1.7rem 1.7rem 1rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+  z-index: 999;
+  gap: 1rem;
+
+  /* NOVO: Estilos para os links dentro do menu mobile */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  text-align: center; /* Centraliza o texto dos links */
 }
 
+/* ESTILO QUANDO O MENU ESTÁ ATIVO (ABERTO) */
+.nav-links.active {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* NOVO: Estilo para os links do menu APENAS em MOBILE */
+.nav-links li a {
+  color: var(--branco); /* Garante que a cor seja branca */
+  font-size: 1.1rem; /* Tamanho do texto para mobile */
+  padding: 0.5rem 0; /* Espaçamento para clique */
+  width: 100%; /* Ocupa a largura total para clique */
+  display: block; /* Para que o padding e width funcionem */
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #929292; /* Cor ao passar o mouse */
+}
 
 /* Estilo do botão do menu (hambúrguer) */
 .menu-button {
   background-color: transparent;
   color: var(--branco);
   border: none;
-  font-size: 2rem; /* Tamanho do ícone do menu */
+  font-size: 2rem;
   cursor: pointer;
-  display: block; /* Visível por padrão em mobile */
+  display: block;
 }
 
-/* Estilos do botão 'Visit Github' (visível em mobile e desktop) */
+/* Estilos do botão 'Visit Github' */
 .visit-btn {
   background: var(--gradiante-azul-rosa);
   color: var(--branco);
-  padding: 0.6rem 1.2rem; /* Ajustado para mobile */
+  padding: 0.6rem 1.2rem;
   font-weight: 500;
-  font-size: 0.9rem; /* Ajustado para mobile */
+  font-size: 0.9rem;
   font-family: var(--font-secundaria);
   text-wrap: nowrap;
   border: none;
   border-radius: 3rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  display: none; /* Escondido por padrão em mobile, será exibido em desktop */
+  display: none;
 }
 
 .visit-btn:hover {
@@ -109,8 +147,8 @@ header {
 
 /* Estilo do botão dark mode e light mode */
 .theme-switch {
-  height: 40px; /* Ajustado para mobile */
-  width: 40px; /* Ajustado para mobile */
+  height: 40px;
+  width: 40px;
   padding: 0;
   border-radius: 50%;
   background-color: var(--branco);
@@ -123,7 +161,7 @@ header {
 }
 
 .theme-switch i {
-  font-size: 18px; /* Ajustado para mobile */
+  font-size: 18px;
   fill: var(--branco);
   color: var(--preto);
   text-align: center;
@@ -144,7 +182,7 @@ header {
 /* Estilos das seções principais */
 section {
   min-height: 100vh;
-  padding: 6rem 8%; /* Ajustado para mobile */
+  padding: 6rem 8%;
   width: 100%;
   position: relative;
   display: flex;
@@ -156,15 +194,15 @@ section {
 /* Estilo da seção "About" */
 .about .about-container {
   display: flex;
-  flex-direction: column; /* Colunas empilhadas em mobile */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem; /* Ajustado para mobile */
+  gap: 3rem;
 }
 
 .about img {
-  width: 60vw; /* Ajustado para mobile */
-  max-width: 250px; /* Limite para imagens mobile */
+  width: 60vw;
+  max-width: 250px;
   border-radius: 50%;
 }
 
@@ -175,41 +213,41 @@ section {
   text-align: center;
   align-items: center;
   justify-content: center;
-  gap: 1rem; /* Ajustado para mobile */
+  gap: 1rem;
 }
 
 .info-box h3 {
   color: var(--preto);
-  font-size: 1.5rem; /* Ajustado para mobile */
+  font-size: 1.5rem;
   font-weight: 500;
   opacity: 0.8;
 }
 
 .info-box h1 {
   color: var(--preto);
-  font-size: 2.8rem; /* Ajustado para mobile */
+  font-size: 2.8rem;
   font-weight: 600;
-  line-height: 1.2; /* Para evitar quebras feias */
+  line-height: 1.2;
 }
 
 .info-box span {
   background: var(--gradiante-rosa-azul);
   background-clip: text;
   color: transparent;
-  font-size: 1.5rem; /* Ajustado para mobile */
+  font-size: 1.5rem;
 }
 
 .info-box p {
   color: var(--preto);
   font-weight: 500;
-  padding: 0 0.5rem; /* Ajustado para mobile */
-  font-size: 0.95rem; /* Ajustado para mobile */
+  padding: 0 0.5rem;
+  font-size: 0.95rem;
 }
 
 /* Estilo dos botões dentro da seção "About" */
 .btn-group {
   display: flex;
-  flex-direction: column; /* Botões empilhados em mobile */
+  flex-direction: column;
   gap: 1rem;
 }
 
@@ -218,13 +256,13 @@ section {
   background-color: var(--preto);
   color: var(--branco);
   border-radius: 3rem;
-  padding: 0.6rem 1.2rem; /* Ajustado para mobile */
+  padding: 0.6rem 1.2rem;
   border: 2px solid black;
   cursor: pointer;
   font-weight: 500;
   text-wrap: nowrap;
   transition: 0.3s ease-in-out;
-  font-size: 0.9rem; /* Ajustado para mobile */
+  font-size: 0.9rem;
 }
 
 .btn:hover {
@@ -236,11 +274,11 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem; /* Espaçamento para mobile */
+  margin-top: 2rem;
 }
 
 .btn-navigation {
-  margin: 0 5px; /* Ajustado para mobile */
+  margin: 0 5px;
 }
 
 .btn-navigation:hover {
@@ -259,12 +297,12 @@ section {
 /* Estilo dos ícones sociais */
 .socials {
   display: flex;
-  gap: 1.5rem; /* Ajustado para mobile */
+  gap: 1.5rem;
 }
 
 .socials i {
   color: var(--preto);
-  font-size: 2rem; /* Ajustado para mobile */
+  font-size: 2rem;
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
@@ -277,48 +315,48 @@ section {
 .section-title {
   color: var(--preto);
   text-align: center;
-  font-size: 3rem; /* Ajustado para mobile */
+  font-size: 3rem;
   font-weight: 600;
-  margin-bottom: 2rem; /* Ajustado para mobile */
+  margin-bottom: 2rem;
 }
 
 /* Estilos das informações de habilidades */
 .skills-info {
   display: flex;
-  flex-direction: column; /* Empilhado em mobile */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem; /* Ajustado para mobile */
+  gap: 3rem;
 }
 
 .skills img {
-  width: 60vw; /* Ajustado para mobile */
-  max-width: 300px; /* Limite para imagens mobile */
+  width: 60vw;
+  max-width: 300px;
   border-radius: 3rem;
 }
 
 /* Estilo da grid de cards de habilidades */
 .grid {
   display: grid;
-  grid-template-columns: 1fr; /* Uma coluna em mobile */
-  gap: 1.5rem; /* Ajustado para mobile */
-  width: 100%; /* Ocupa a largura total em mobile */
-  max-width: 500px; /* Limite para a grid em mobile */
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 500px;
 }
 
 /* Estilos dos cards da grid */
 .grid-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinha o texto à esquerda */
-  justify-content: flex-start; /* Alinha o conteúdo ao topo */
-  padding: 1.5rem; /* Ajustado para mobile */
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1.5rem;
   color: var(--preto);
   border: 2px solid var(--preto);
-  border-radius: 2rem; /* Ajustado para mobile */
+  border-radius: 2rem;
   cursor: pointer;
   transition: 0.2s ease-in-out;
-  text-align: left; /* Garante que o texto dentro do card fique à esquerda */
+  text-align: left;
 }
 
 .grid-card:hover {
@@ -328,26 +366,26 @@ section {
 }
 
 .grid-card i {
-  font-size: 1.3rem; /* Ajustado para mobile */
-  margin-bottom: 0.8rem; /* Ajustado para mobile */
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
 }
 
 .grid-card span {
   background: var(--gradiante-azul-rosa);
   background-clip: text;
   color: transparent;
-  font-size: 1.3rem; /* Ajustado para mobile */
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
 .grid-card p {
-  font-size: 0.9rem; /* Ajustado para mobile */
+  font-size: 0.9rem;
   margin-top: 0.5rem;
 }
 
 /* Estilo da scrollbar */
 ::-webkit-scrollbar {
-  width: 12px; /* Ajustado para mobile */
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
@@ -362,10 +400,10 @@ section {
 /* Estilo da grid de projetos */
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Uma coluna em mobile */
-  gap: 1.5rem; /* Ajustado para mobile */
-  width: 100%; /* Ocupa a largura total em mobile */
-  max-width: 500px; /* Limite para a grid em mobile */
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 500px;
 }
 
 /* Estilos dos cards de projetos */
@@ -375,11 +413,11 @@ section {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem 1.5rem; /* Ajustado para mobile */
-  gap: 1rem; /* Ajustado para mobile */
+  padding: 2rem 1.5rem;
+  gap: 1rem;
   color: var(--preto);
   border: 2px solid var(--preto);
-  border-radius: 2rem; /* Ajustado para mobile */
+  border-radius: 2rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
@@ -391,8 +429,8 @@ section {
 }
 
 .projects-card img {
-  width: 80%; /* Ajustado para mobile */
-  max-width: 250px; /* Limite para imagens em mobile */
+  width: 80%;
+  max-width: 250px;
   border-radius: 1rem;
 }
 
@@ -409,12 +447,12 @@ section {
 }
 
 .projects-card h3 {
-  font-size: 1.8rem; /* Ajustado para mobile */
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
 .projects-card p {
-  font-size: 0.9rem; /* Ajustado para mobile */
+  font-size: 0.9rem;
 }
 
 /* Estilo do formulário de contato */
@@ -423,30 +461,30 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5em; /* Ajustado para mobile */
-  width: 100%; /* Ocupa a largura total em mobile */
-  max-width: 500px; /* Limite para o formulário em mobile */
+  gap: 1.5em;
+  width: 100%;
+  max-width: 500px;
 }
 
 /* Estilos do input do formulário */
 form .input-box {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinhado à esquerda */
-  gap: 0.8em; /* Ajustado para mobile */
+  align-items: flex-start;
+  gap: 0.8em;
   width: 100%;
 }
 
 .input-box label {
   color: var(--preto);
-  font-size: 1.2em; /* Ajustado para mobile */
+  font-size: 1.2em;
 }
 
 form input {
   background: var(--gradiante-rosa-azul);
   color: var(--branco);
-  font-size: 1em; /* Ajustado para mobile */
-  padding: 0.8em 1.5em; /* Ajustado para mobile */
+  font-size: 1em;
+  padding: 0.8em 1.5em;
   border-radius: 0.5em;
   border: none;
   outline: none;
@@ -460,21 +498,21 @@ form input::placeholder {
 
 form input:focus {
   background: var(--gradiante-azul-rosa);
-  transform: scale(1.02); /* Suavemente menor para mobile */
+  transform: scale(1.02);
 }
 
 /* Estilos do textarea do formulário */
 form textarea {
   background: var(--gradiante-rosa-azul);
-  color: var(--branco); /* Cor do texto no textarea */
-  font-size: 1em; /* Ajustado para mobile */
-  padding: 1em 1.5em; /* Ajustado para mobile */
+  color: var(--branco);
+  font-size: 1em;
+  padding: 1em 1.5em;
   border-radius: 0.5em;
   border: none;
   outline: none;
   width: 100%;
-  height: 100px; /* Ajustado para mobile */
-  resize: vertical; /* Permite redimensionar verticalmente */
+  height: 100px;
+  resize: vertical;
 }
 
 form textarea::placeholder {
@@ -489,9 +527,9 @@ form textarea::placeholder {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 180px; /* Ajustado para mobile */
-  height: 45px; /* Ajustado para mobile */
-  font-size: 1rem; /* Ajustado para mobile */
+  max-width: 180px;
+  height: 45px;
+  font-size: 1rem;
   border: 2px solid var(--preto);
   border-radius: 2rem;
   cursor: pointer;
@@ -500,21 +538,21 @@ form textarea::placeholder {
 
 .btn-submit:hover {
   background: var(--gradiante-rosa-azul);
-  transform: scale(1.05); /* Suavemente menor para mobile */
+  transform: scale(1.05);
 }
 
 /* Estilos do footer */
 footer {
-  background-color: var(--preto); /* Fundo escuro para contraste no mobile */
-  color: var(--branco); /* Texto claro no footer */
+  background-color: var(--preto);
+  color: var(--branco);
   display: flex;
-  flex-direction: column; /* Colunas empilhadas em mobile */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2em; /* Ajustado para mobile */
+  gap: 2em;
   bottom: 0;
   width: 100%;
-  padding: 2em 8%; /* Ajustado para mobile */
+  padding: 2em 8%;
   box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -522,59 +560,59 @@ footer {
 .col-left {
   display: flex;
   flex-direction: column;
-  gap: 1em; /* Ajustado para mobile */
-  align-items: center; /* Centraliza itens em mobile */
+  gap: 1em;
+  align-items: center;
   text-align: center;
 }
 
 .col-box {
   display: flex;
   align-items: center;
-  gap: 0.6em; /* Ajustado para mobile */
+  gap: 0.6em;
 }
 
 .col-box i {
-  font-size: 1.5em; /* Ajustado para mobile */
-  color: var(--branco); /* Ícones brancos no footer */
+  font-size: 1.5em;
+  color: var(--branco);
 }
 
 .col-box span {
-  font-size: 1rem; /* Ajustado para mobile */
-  color: var(--branco); /* Texto branco no footer */
+  font-size: 1rem;
+  color: var(--branco);
 }
 
 .col-right {
   display: flex;
   flex-direction: column;
-  color: var(--branco); /* Texto branco no footer */
-  gap: 1em; /* Ajustado para mobile */
+  color: var(--branco);
+  gap: 1em;
   max-width: 450px;
-  text-align: center; /* Centraliza o texto */
+  text-align: center;
 }
 
 .col-right span {
   font-weight: 600;
-  font-size: 1.1em; /* Ajustado para mobile */
-  color: var(--branco); /* Texto branco no footer */
+  font-size: 1.1em;
+  color: var(--branco);
 }
 
 .col-right .socials-icons {
   display: flex;
-  align-items: center; /* Centraliza os ícones */
-  justify-content: center; /* Centraliza os ícones */
+  align-items: center;
+  justify-content: center;
   gap: 1em;
 }
 
 .col-right .socials-icons i {
-  font-size: 1.5em; /* Ajustado para mobile */
+  font-size: 1.5em;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor: pointer;
-  color: var(--branco); /* Ícones brancos no footer */
+  color: var(--branco);
 }
 
 .col-right .socials-icons i:hover {
   transform: scale(1.2);
-  color: var(--gradiante-azul-rosa); /* Cor de hover para ícones */
+  color: var(--gradiante-azul-rosa);
 }
 
 .col-right .socials-icons a {
