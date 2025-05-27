@@ -1,228 +1,281 @@
-/* Estilos para telas médias (tablets) */
-@media screen and (max-width: 1024px) {
-  .header {
-    gap: 3rem;
-    padding: 0.5rem 1rem;
+/* Media Query para telas de tablet e desktop (a partir de 768px de largura) */
+@media (min-width: 768px) {
+  /* Header */
+  header {
+    justify-content: space-between; /* Espaçamento entre os itens do header */
+    gap: 5rem;
+    padding: 0.5rem 1.5rem;
+    width: auto; /* Deixa o header ajustar-se ao conteúdo */
   }
 
-  #about .about-container {
-    flex-direction: column;
-    gap: 3rem;
+  .header .logo {
+    font-size: 1.3rem;
   }
 
-  #about img {
-    width: 50vw;
+  .nav-links {
+    display: flex; /* Mostra o menu de navegação em telas maiores */
+    gap: 2rem;
   }
 
-  #skills-info-mobile {
-    flex-direction: column;
-    gap: 3rem;
+  /* Esconde o botão de menu (hambúrguer) em telas maiores */
+  .menu-button {
+    display: none;
   }
 
-  #skills img {
-    width: 50vw;
+  /* Estilos dos links do menu */
+  li a {
+    color: var(--branco);
+    font-weight: 300;
+    font-family: var(--font-secundaria);
+    font-size: 1rem; /* Tamanho padrão para desktop */
+    transition: all .3s ease-in-out;
   }
 
-  #grid {
-    grid-template-columns: 1fr;
+  li a:hover {
+    color: #929292;
   }
 
-  #projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 929px) {
-  .header {
-    width: 100%;
-    padding: 0.5rem 1rem; /* Mantém um bom espaçamento lateral */
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribui melhor os elementos */
-    gap: 1rem; /* Evita que os itens fiquem muito colados */
-  }
-
-  #logo {
-    font-size: 1.1rem; /* Mantém o nome visível sem ocupar muito espaço */
-  }
-
-  #nav-links {
-    font-size: 0.9rem;
-  }
-
-  #menu-button {
-    font-size: 1.4rem;
-    padding: 0.4rem;
-    margin-left: auto; /* Empurra o menu para o lado direito */
-  }
-
-  #theme-switch {
-    font-size: 1rem;
-    padding: 0.5rem; /* Mantém o botão mais equilibrado */
-    border-radius: 50%; /* Mantém ele redondo */
-    margin-left: 0.5rem; /* Adiciona um pequeno espaçamento ao lado do menu */
-  }
-
-  #visit-btn {
-    font-size: 0.85rem;
-    padding: 0.9rem 0.9rem;
-    margin-left: 0.5rem; /* Dá espaço entre os botões */
-  }
-}
-
-/* Estilos para telas pequenas (celulares) */
-@media screen and (max-width: 768px) {
-  /* Fazer o header */
-  header #menu-icon {
-    display: block;
-    padding: 2px;
+  li a::before {
+    height: 5px;
+    top: 20px;
   }
 
   .visit-btn {
-    display: none;
+    display: block; /* Mostra o botão 'Visit Github' em telas maiores */
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
   }
 
-  #nav-links {
-    background: rgb(0, 0, 0, 0.9);
-    color: white;
-    display: none;
-    flex-direction: column;
-    text-align: center;
-    position: absolute;
-    top: 100%;
-    margin-top: 1rem;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 3rem;
+  .theme-switch {
+    height: 50px;
+    width: 50px;
   }
 
-  .menu-button {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    cursor: pointer;
+  .theme-switch i {
+    font-size: 20px;
   }
 
-  #nav-links.active {
-    display: flex;
+  /* Seções */
+  section {
+    padding: 8rem 12%; /* Padding maior para desktop */
   }
 
-  #nav-links.active li a {
-    color: #fff;
-  }
-
-  #theme-mobile {
-    position: absolute;
-    top: 50%;
-    right: 1%;
-    transform: translateY(-50%);
-  }
-
+  /* Seção "About" */
   .about .about-container {
-    text-align: center;
-    gap: 2rem;
+    flex-direction: row; /* Volta para linha em desktop */
+    gap: 10rem;
+    text-align: left; /* Alinha o texto à esquerda */
   }
 
-  #about img {
-    width: 70vw;
+  .about img {
+    width: 30vw; /* Tamanho da imagem no desktop */
+    max-width: none; /* Remove o limite */
+  }
+
+  .info-box {
+    text-align: left; /* Alinha o texto à esquerda */
+    align-items: flex-start; /* Alinha itens à esquerda */
+    gap: 1.5rem;
+  }
+
+  .info-box h3 {
+    font-size: 1.8rem;
   }
 
   .info-box h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
 
   .info-box span {
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .info-box p {
+    padding: 0; /* Remove padding lateral */
+    font-size: 1rem; /* Tamanho padrão para desktop */
   }
 
   .btn-group {
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: row; /* Botões em linha em desktop */
   }
 
-  #mobile-title-section {
-    font-size: 3rem;
+  .btn, .btn-navigation {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
   }
 
-  #skills-info {
-    width: 90vw;
-    max-width: 600px;
-    text-align: center;
-    margin: 0 auto; /* Centraliza o container */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza os itens */
+  .socials {
     gap: 2rem;
   }
 
-  #grid {
-    display: flex;
-    flex-direction: column;
+  .socials i {
+    font-size: 2.5rem;
+  }
+
+  /* Título das seções */
+  .section-title {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  /* Seção "Skills" */
+  .skills-info {
+    flex-direction: row; /* Volta para linha em desktop */
+    gap: 5rem;
+  }
+
+  .skills img {
+    width: 24vw; /* Tamanho da imagem no desktop */
+    max-width: none; /* Remove o limite */
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas em desktop */
+    gap: 2rem;
+    max-width: none; /* Remove o limite */
+  }
+
+  .grid-card {
+    padding: 3rem;
+    border-radius: 3rem;
+  }
+
+  .grid-card i {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .grid-card span {
+    font-size: 1.5rem;
+  }
+
+  .grid-card p {
+    font-size: 1rem; /* Tamanho padrão para desktop */
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  /* Projetos */
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Mantém flexibilidade */
+    gap: 2rem;
+    max-width: none; /* Remove o limite */
+  }
+
+  .projects-card {
+    padding: 3rem 2rem;
     gap: 1.5rem;
-    align-items: center; /* Centraliza os cards */
-    justify-content: center; /* Garante alinhamento vertical */
-    width: 100%;
+    border-radius: 3rem;
   }
 
-  #grid-card-mobile {
-    width: 90%;
-    max-width: 400px;
-    padding: 1.5rem;
+  .projects-card img {
+    width: 20vw; /* Tamanho da imagem no desktop */
+    max-width: none; /* Remove o limite */
   }
 
-  #skills img {
-    width: 80vw;
+  .projects-card h3 {
+    font-size: 2rem;
   }
 
-  #projects #projects-grid {
-    grid-template-columns: 1fr;
+  .projects-card p {
+    font-size: 1rem; /* Tamanho padrão para desktop */
   }
 
-  #projects #projects-card {
-    width: 100%;
+  /* Formulário de contato */
+  form {
+    gap: 2em;
+    max-width: 600px; /* Aumenta a largura máxima do formulário */
   }
 
-  form input,
+  form .input-box {
+    gap: 1em;
+  }
+
+  .input-box label {
+    font-size: 1.5em;
+  }
+
+  form input {
+    font-size: 1.2em;
+    padding: 1em 2em;
+    max-width: none; /* Remove o limite */
+  }
+
+  form input:focus {
+    transform: scale(1.05);
+  }
+
   form textarea {
-    max-width: 100%;
+    font-size: 1.3em;
+    padding: 1em 2.5em;
+    max-width: none; /* Remove o limite */
+    height: 150px; /* Altura maior para desktop */
   }
 
+  .btn-submit {
+    max-width: 200px;
+    height: 50px;
+    font-size: 1.1rem;
+  }
+
+  .btn-submit:hover {
+    transform: scale(1.1);
+  }
+
+  /* Footer */
   footer {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
+    background-color: var(--branco); /* Volta para fundo claro no desktop */
+    color: var(--preto); /* Texto escuro no footer */
+    flex-direction: row; /* Colunas em linha em desktop */
+    gap: 4em;
+    padding: 3em 10%;
   }
 
-  .col-right #socials-icons-mobile {
-    justify-content: center;
+  .col-left {
+    gap: 1.2em;
+    align-items: flex-start; /* Alinha itens à esquerda */
+    text-align: left;
+  }
+
+  .col-box {
+    gap: 0.8em;
+  }
+
+  .col-box i {
+    font-size: 1.8em;
+    color: var(--preto); /* Ícones pretos no footer */
+  }
+
+  .col-box span {
+    font-size: 1.1rem;
+    color: var(--preto); /* Texto preto no footer */
+  }
+
+  .col-right {
+    gap: 1em;
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+
+  .col-right span {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: var(--preto); /* Texto preto no footer */
+  }
+
+  .col-right .socials-icons {
+    justify-content: flex-start; /* Alinha os ícones à esquerda */
+  }
+
+  .col-right .socials-icons i {
+    font-size: 1.5em;
+    color: var(--preto); /* Ícones pretos no footer */
   }
 }
 
-@media screen and (max-width: 400px) {
-  .logo span {
-    font-size: 1.1rem; /* Diminui o tamanho do nome */
-  }
-
-  #skills-info {
-    width: 95vw;
-    margin: 0 auto;
-    gap: 2.5rem; /* Aumenta espaço entre as seções */
-  }
-
-  #grid {
-    align-items: center;
-    gap: 3rem; /* Mais espaço entre os cards */
-  }
-
-  #grid-card {
-    width: 100%;
-    max-width: 360px;
-    text-align: center;
-    padding: 1.8rem; /* Mais espaço interno */
-  }
-
-  #theme-switch {
-    font-size: 0.8rem; /* Diminui o tamanho */
-    padding: 0.3rem; /* Reduz o espaçamento interno */
-  }
+/* Media Query para telas de desktop maiores (opcional, a partir de 1024px de largura) */
+@media (min-width: 1024px) {
+  /* Pequenos ajustes para telas maiores, se necessário */
 }

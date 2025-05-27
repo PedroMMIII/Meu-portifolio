@@ -1,21 +1,12 @@
-<!-- Declaração do tipo de documento e da linguagem utilizada -->
 <!DOCTYPE html>
 <html lang="pt-br">
-  <!-- Cabeçalho da página, onde são definidas as metainformações -->
   <head>
-    <!-- Define a codificação de caracteres utilizada na página -->
     <meta charset="UTF-8" />
-    <!-- Define a configuração de visualização para dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Título da página, exibido na barra de título do navegador -->
     <title>Portifolio</title>
-    <!-- Links para folhas de estilo CSS -->
-    <!-- Estilos -->
-    <link rel="stylesheet" href="css/mediaQuery.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- Icones -->
+    <link rel="stylesheet" href="css/mediaQuery.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,15 +14,11 @@
       rel="stylesheet"
     />
   </head>
-  <!-- Corpo da página, onde é definido o conteúdo -->
   <body>
-    <!-- Cabeçalho da página, com logotipo, menu e botões -->
     <header class="header">
-      <!-- Logotipo da página -->
-      <a href="#" class="logo" id="logo"><span>Pedro Monteiro</span></a>
+      <a href="#" class="logo"><span>Pedro Monteiro</span></a>
 
-      <!-- Menu de navegação -->
-      <ul class="nav-links" id="nav-links">
+      <ul class="nav-links">
         <li>
           <a href="#about">Sobre</a>
         </li>
@@ -46,26 +33,21 @@
         </li>
       </ul>
 
-      <!-- Botão para abrir o menu em dispositivos móveis -->
-      <button class="menu-button"><i class="fa-solid fa-bars" id="menu-icon"></i></button>
-
-      <button class="theme-switch" id="theme-mobile">
-        <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun"></i>
+      <button class="menu-button">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
       </button>
 
-      <!-- Botão para visitar o GitHub -->
-      <a href="https://github.com/PedroMMIII" target="_blank"
-        ><button class="visit-btn" id="visit-btn">Visite Github</button></a
-      >
+      <button class="theme-switch"><i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun"></i></button>
+
+      <a href="https://github.com/PedroMMIII" target="_blank">
+        <button class="visit-btn">Visite Github</button>
+      </a>
     </header>
 
-    <!-- Seção sobre o autor -->
     <section id="about" class="about">
       <div class="about-container">
-        <!-- Imagem do autor -->
         <img src="img/foto-ghibli-portifolio.png" alt="foto" />
 
-        <!-- Informações sobre o autor -->
         <div class="info-box">
           <div class="text">
             <h3>Ola, meu nome é</h3>
@@ -77,17 +59,17 @@
             </p>
           </div>
 
-          <!-- Botões para download do currículo e contato -->
           <div class="btn-group">
             <div class="btn">
               <a href="curriculo/Currículo Profissional.pdf" download="Currículo Profissional.pdf"
                 >Download Curriculo</a
               >
             </div>
-            <div class="btn"><a href=" https://wa.me/35999979233" target="_blank">Contato</a></div>
+            <div class="btn">
+              <a href="https://wa.me/35999979233" target="_blank">Contato</a>
+            </div>
           </div>
 
-          <!-- Links para redes sociais -->
           <div class="socials">
             <a href="https://github.com/PedroMMIII" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.instagram.com/itspedromonteiro?igsh=aXFocHYyaTVtNjRw" target="_blank"
@@ -101,15 +83,12 @@
       </div>
     </section>
 
-    <!-- Seção sobre habilidades -->
     <section id="skills" class="skills">
-      <h2 class="section-title" id="mobile-title-section">Habilidades</h2>
+      <h2 class="section-title">Habilidades</h2>
 
-      <!-- Informações sobre habilidades -->
-      <div class="skills-info" id="skills-info-mobile">
-        <!-- Grade de habilidades -->
-        <div class="grid" id="grid">
-          <div class="grid-card" id="grid-card-mobile">
+      <div class="skills-info">
+        <div class="grid">
+          <div class="grid-card">
             <i class="fa-brands fa-html5"></i>
             <span>HTML</span>
             <p>
@@ -121,7 +100,7 @@
             </p>
           </div>
 
-          <div class="grid-card" id="grid-card-mobile">
+          <div class="grid-card">
             <i class="fa-brands fa-css3-alt"></i>
             <span>CSS</span>
             <p>
@@ -133,7 +112,7 @@
             </p>
           </div>
 
-          <div class="grid-card" id="grid-card-mobile">
+          <div class="grid-card">
             <i class="fa-brands fa-js"></i>
             <span>JavaScript</span>
             <p>
@@ -144,7 +123,7 @@
             </p>
           </div>
 
-          <div class="grid-card" id="grid-card-mobile">
+          <div class="grid-card">
             <i class="fa-brands fa-react"></i>
             <span>React</span>
             <p>
@@ -155,26 +134,21 @@
           </div>
         </div>
 
-        <!-- Imagem de fundo para a seção de habilidades -->
         <img src="img/foto-ghibli-portifolio.png" alt="" />
       </div>
     </section>
 
-    <!-- Seção de projetos -->
     <section id="projects" class="projects">
       <h2 class="section-title">Projetos</h2>
 
-      <!-- Div que irá exibir os projetos dinamicamente -->
       <div id="projectsGrid" class="projects-grid"></div>
 
-      <!-- Botões de navegação para trocar os projetos -->
       <div class="navigation">
         <button class="btn-navigation" id="prevBtn" onclick="changeProjects(-1)">Anterior</button>
         <button class="btn-navigation" id="nextBtn" onclick="changeProjects(1)">Próximo</button>
       </div>
     </section>
 
-    <!-- Aqui estão todos os projetos, mas eles estão escondidos -->
     <div id="allProjects" style="display: none">
       <div class="projects-card">
         <img src="img/Projeto-barbearia.png" alt="Projeto 1" />
@@ -185,12 +159,12 @@
           barbearia, serviços e contato.
         </p>
         <div class="btn-group">
-          <a href="https://pedrommiii.github.io/Barbearia/" target="_blank"
-            ><button class="btn">Live Demo</button></a
-          >
-          <a href="https://github.com/PedroMMIII/Barbearia" target="_blank"
-            ><button class="btn">Github Repositorio</button></a
-          >
+          <a href="https://pedrommiii.github.io/Barbearia/" target="_blank">
+            <button class="btn">Live Demo</button>
+          </a>
+          <a href="https://github.com/PedroMMIII/Barbearia" target="_blank">
+            <button class="btn">Github Repositorio</button>
+          </a>
         </div>
       </div>
 
@@ -202,12 +176,12 @@
           esportivos, exibindo nome e informações de cada modelo em um layout moderno e responsivo.
         </p>
         <div class="btn-group">
-          <a href="https://pedrommiii.github.io/Projeto-FpSellection/" target="_blank"
-            ><button class="btn">Live Demo</button></a
-          >
-          <a href="https://github.com/PedroMMIII/Projeto-FpSellection" target="_blank"
-            ><button class="btn">Github Repositorio</button></a
-          >
+          <a href="https://pedrommiii.github.io/Projeto-FpSellection/" target="_blank">
+            <button class="btn">Live Demo</button>
+          </a>
+          <a href="https://github.com/PedroMMIII/Projeto-FpSellection" target="_blank">
+            <button class="btn">Github Repositorio</button>
+          </a>
         </div>
       </div>
 
@@ -220,12 +194,12 @@
           proporcionando uma experiência visual envolvente.
         </p>
         <div class="btn-group">
-          <a href="https://pedrommiii.github.io/X-men-site/" target="_blank"
-            ><button class="btn">Live Demo</button></a
-          >
-          <a href="https://pedrommiii.github.io/X-men-site/" target="_blank"
-            ><button class="btn">Github Repositorio</button></a
-          >
+          <a href="https://pedrommiii.github.io/X-men-site/" target="_blank">
+            <button class="btn">Live Demo</button>
+          </a>
+          <a href="https://pedrommiii.github.io/X-men-site/" target="_blank">
+            <button class="btn">Github Repositorio</button>
+          </a>
         </div>
       </div>
 
@@ -260,37 +234,29 @@
       </div>
     </div>
 
-    <!-- Seção de contato -->
     <section class="contact" id="contact">
       <h2 class="section-title"><span>Contato</span></h2>
 
-      <!-- Formulário de contato -->
       <form id="contact-form" action="#">
-        <!-- Campo para nome -->
         <div class="input-box">
           <label for="name">Nome</label>
           <input type="text" id="name" placeholder="Digite seu nome" />
         </div>
-        <!-- Campo para e-mail -->
         <div class="input-box">
           <label for="email">Email</label>
           <input type="email" id="email" placeholder="Digite seu email" />
         </div>
 
-        <!-- Campo para mensagem -->
         <div class="input-box">
           <label for="message">Mensagem</label>
           <textarea id="message"></textarea>
         </div>
 
-        <!-- Botão para enviar o formulário -->
-        <button class="btn-submit" id="btn-submit">Enviar</button>
+        <button class="btn-submit">Enviar</button>
       </form>
     </section>
 
-    <!-- Rodapé da página -->
     <footer class="footer-query">
-      <!-- Coluna esquerda com informações de contato -->
       <div class="col-left">
         <div class="col-box">
           <span><i class="fa-brands fa-whatsapp"></i></span>
@@ -303,7 +269,6 @@
         </div>
       </div>
 
-      <!-- Coluna direita com informações sobre o serviço -->
       <div class="col-right">
         <span>Sobre meu serviço</span>
         <p>
@@ -313,8 +278,7 @@
           sempre entregar soluções personalizadas e de alta qualidade.
         </p>
 
-        <!-- Links para redes sociais -->
-        <div class="socials-icons" id="socials-icons-mobile">
+        <div class="socials-icons">
           <a href="#"
             ><span><i class="fa-brands fa-github"></i></span
           ></a>
@@ -328,19 +292,11 @@
       </div>
     </footer>
 
-    <!-- Link para o arquivo JavaScript -->
-
-    <!-- Carregar a biblioteca do EmailJS primeiro -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <!-- Seu script de envio de e-mail -->
     <script src="js/emailApi.js" defer></script>
-    <!-- Alert personalizado -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- Script de alterar thema -->
     <script src="js/theme.js" defer></script>
-    <!-- Script carousel  de projetos -->
     <script src="js/projects.js" defer></script>
-    <!-- Script do menu hamburger -->
-     <script src="js/menuHamburger.js"></script>
+    <script src="js/menuHamburger.js"></script>
   </body>
 </html>
